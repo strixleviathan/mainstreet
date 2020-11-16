@@ -7,10 +7,8 @@ require "mainstreet/version"
 
 if ENV["SMARTY_STREETS_AUTH_ID"]
   Geocoder.config[:smarty_streets] ||= {
-    api_key: [
-      ENV["SMARTY_STREETS_AUTH_ID"],
-      ENV["SMARTY_STREETS_AUTH_TOKEN"]
-    ]
+    'auth-id': ENV["SMARTY_STREETS_AUTH_ID"],
+    'auth-token': ENV["SMARTY_STREETS_AUTH_TOKEN"]
   }
 end
 
